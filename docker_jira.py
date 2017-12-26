@@ -12,7 +12,7 @@ class docker_jira(ShutItModule):
 		shutit.send('cd /opt/atlassian')
 		f = 'atlassian-jira-6.4.1-x64.bin'
 		shutit.get_url(f,['https://www.atlassian.com/software/jira/downloads/binary/'])
-		shutit.multisend('sh ./' + f,{', Cancel':'o','Express Install':'1','Install':'i'})
+		shutit.multisend('sh ./' + f,{', Cancel':'o','Express Install':'1','i, Enter':'i'})
 		return True
 
 def module():
